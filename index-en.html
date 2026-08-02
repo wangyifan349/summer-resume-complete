@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Wang Yifan's personal resume, job-search profile, and GitHub project portfolio for Python backend, Rust, Linux server-side, and network programming roles." name="description"/>
+<meta content="Wang Yifan" name="author"/>
+<meta content="#f45a24" name="theme-color"/>
+<meta content="profile" property="og:type"/>
+<meta content="Wang Yifan | Python / Rust Developer &amp; Open-Source Projects" property="og:title"/>
+<meta content="Wang Yifan's personal resume, job-search profile, and GitHub project portfolio for Python backend, Rust, Linux server-side, and network programming roles." property="og:description"/>
+<meta content="hero-summer.webp" property="og:image"/>
+<title>Wang Yifan | Python / Rust Developer &amp; Open-Source Projects</title>
+<link href="index.html" hreflang="zh-CN" rel="alternate"/>
+<link href="index-en.html" hreflang="en" rel="alternate"/>
+<link href="index.html" hreflang="x-default" rel="alternate"/>
+<link as="image" href="hero-summer.webp" rel="preload" type="image/webp"/>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" rel="stylesheet"/>
+<style>
+:root {
+  --orange-50: #fff8ef;
+  --orange-100: #ffead7;
+  --orange-200: #ffd1ad;
+  --orange-300: #ffac71;
+  --orange-400: #ff7b3d;
+  --orange-500: #f45a24;
+  --orange-600: #dd4218;
+  --coral: #ef4d33;
+  --sun: #ffb449;
+  --cream: #fffaf4;
+  --ink: #261710;
+  --muted: #72584d;
+  --surface: rgba(255, 253, 249, .90);
+  --surface-solid: #fffdfa;
+  --border: rgba(94, 47, 28, .13);
+  --shadow: 0 20px 55px rgba(110, 49, 21, .12);
+  --shadow-strong: 0 34px 90px rgba(110, 49, 21, .18);
+  --radius-sm: 18px;
+  --radius-md: 28px;
+  --radius-lg: 42px;
+  --content: 1180px;
+  --nav-height: 76px;
+  --bs-primary: #ef4d33;
+  --bs-primary-rgb: 239, 77, 51;
+  --bs-link-color: #d9411e;
+  --bs-link-hover-color: #b82f13;
+  --bs-body-bg: var(--cream);
+  --bs-body-color: var(--ink);
+}
+
+[data-bs-theme="dark"] {
+  --cream: #180d09;
+  --ink: #fff7ef;
+  --muted: #d9b7a6;
+  --surface: rgba(42, 23, 16, .91);
+  --surface-solid: #2a1711;
+  --border: rgba(255, 222, 200, .13);
+  --shadow: 0 22px 60px rgba(0, 0, 0, .28);
+  --shadow-strong: 0 40px 95px rgba(0, 0, 0, .38);
+  --bs-body-bg: var(--cream);
+  --bs-body-color: var(--ink);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-height) + 18px); }
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(rgba(255, 250, 244, .80), rgba(255, 250, 244, .94)),
+    url('summer-texture.webp') center top / cover fixed;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+[data-bs-theme="dark"] body {
+  background:
+    linear-gradient(rgba(24, 13, 9, .88), rgba(24, 13, 9, .96)),
+    url('summer-texture.webp') center top / cover fixed;
+}
+a { text-underline-offset: .18em; }
+img { max-width: 100%; }
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 1rem;
+  z-index: 3000;
+  padding: .7rem 1rem;
+  border-radius: 12px;
+  background: var(--ink);
+  color: var(--cream);
+  transition: top .2s ease;
+}
+.skip-link:focus { top: 1rem; }
+
+.scroll-progress {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 2500;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sun), var(--orange-500), var(--coral));
+  box-shadow: 0 0 16px rgba(244, 90, 36, .5);
+}
+
+.site-nav {
+  min-height: var(--nav-height);
+  background: rgba(255, 252, 247, .82);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+[data-bs-theme="dark"] .site-nav { background: rgba(24, 13, 9, .82); }
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  color: var(--ink) !important;
+  font-weight: 850;
+  letter-spacing: -.03em;
+}
+.brand-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 14px;
+  color: #fff;
+  background: linear-gradient(145deg, var(--sun), var(--orange-500) 58%, var(--coral));
+  box-shadow: 0 12px 28px rgba(239, 77, 51, .25);
+  font-size: .9rem;
+}
+.nav-link {
+  position: relative;
+  color: var(--muted) !important;
+  font-weight: 700;
+}
+.nav-link:hover, .nav-link.active { color: var(--orange-600) !important; }
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: .55rem;
+  right: .55rem;
+  bottom: .2rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--sun), var(--coral));
+  transform: scaleX(0);
+  transition: transform .18s ease;
+}
+.nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+.navbar-toggler { border-color: var(--border); }
+.navbar-toggler:focus { box-shadow: 0 0 0 .2rem rgba(239, 77, 51, .16); }
+
+.btn-summer {
+  border: 0;
+  color: #fff;
+  background: linear-gradient(135deg, var(--orange-500), var(--coral));
+  box-shadow: 0 14px 30px rgba(239, 77, 51, .24);
+  font-weight: 750;
+}
+.btn-summer:hover, .btn-summer:focus {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(239, 77, 51, .31);
+}
+.btn-soft {
+  color: var(--ink);
+  background: rgba(255,255,255,.72);
+  border: 1px solid var(--border);
+  font-weight: 720;
+  backdrop-filter: blur(10px);
+}
+[data-bs-theme="dark"] .btn-soft { background: rgba(46,25,18,.75); }
+.btn-soft:hover, .btn-soft:focus { color: var(--orange-600); border-color: rgba(239,77,51,.35); transform: translateY(-2px); }
+.btn-icon {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 14px;
+}
+.btn { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+
+.hero {
+  position: relative;
+  min-height: min(900px, 100svh);
+  padding: calc(var(--nav-height) + 5rem) 0 5rem;
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background: url('hero-summer.webp') center / cover no-repeat;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(90deg, rgba(255,250,244,.95) 0%, rgba(255,250,244,.83) 48%, rgba(255,250,244,.25) 100%),
+    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,242,226,.35));
+}
+[data-bs-theme="dark"] .hero::after {
+  background:
+    linear-gradient(90deg, rgba(24,13,9,.94) 0%, rgba(24,13,9,.83) 50%, rgba(24,13,9,.28) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.08), rgba(24,13,9,.46));
+}
+.hero-orb {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: .62;
+  animation: float 8s ease-in-out infinite;
+}
+.hero-orb.one { width: 95px; height: 95px; right: 10%; top: 17%; background: rgba(255, 177, 74, .45); }
+.hero-orb.two { width: 150px; height: 150px; right: 30%; bottom: 8%; background: rgba(239, 77, 51, .18); animation-delay: -2.5s; }
+@keyframes float { 50% { transform: translateY(-16px) translateX(8px); } }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .45rem .8rem;
+  border: 1px solid rgba(239,77,51,.22);
+  border-radius: 999px;
+  background: rgba(255,255,255,.58);
+  color: var(--orange-600);
+  font-size: .84rem;
+  font-weight: 820;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+[data-bs-theme="dark"] .eyebrow { background: rgba(43,24,17,.72); }
+.hero-title {
+  margin: 1.35rem 0 .8rem;
+  max-width: 850px;
+  font-size: clamp(3.6rem, 8vw, 7.5rem);
+  line-height: .94;
+  letter-spacing: -.075em;
+  font-weight: 900;
+}
+.hero-title span {
+  display: block;
+  color: transparent;
+  background: linear-gradient(120deg, var(--orange-500), var(--coral) 58%, #c93014);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.hero-role {
+  margin-bottom: 1rem;
+  color: var(--ink);
+  font-size: clamp(1.15rem, 2.6vw, 1.65rem);
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+.hero-lead { max-width: 760px; color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.16rem); }
+.hero-tags { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.6rem 0 2rem; }
+.hero-tag {
+  padding: .52rem .8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(239,77,51,.17);
+  background: rgba(255,252,247,.74);
+  color: var(--ink);
+  font-size: .88rem;
+  font-weight: 760;
+  backdrop-filter: blur(10px);
+}
+[data-bs-theme="dark"] .hero-tag { background: rgba(42,23,17,.75); }
+
+.profile-card {
+  position: relative;
+  padding: 1.35rem;
+  border: 1px solid rgba(255,255,255,.58);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, rgba(255,255,255,.79), rgba(255,242,226,.68));
+  box-shadow: var(--shadow-strong);
+  backdrop-filter: blur(20px) saturate(135%);
+  overflow: hidden;
+}
+[data-bs-theme="dark"] .profile-card { background: linear-gradient(160deg, rgba(48,27,19,.86), rgba(35,18,13,.78)); border-color: var(--border); }
+.profile-card::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -85px;
+  top: -95px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,177,73,.48), rgba(239,77,51,.05) 70%);
+}
+.avatar {
+  position: relative;
+  display: grid;
+  width: 132px;
+  height: 132px;
+  place-items: center;
+  margin-bottom: 1.2rem;
+  border-radius: 38px;
+  color: #fff;
+  background: linear-gradient(145deg, #ffb24a, #f45a24 55%, #e43e28);
+  box-shadow: 0 22px 48px rgba(239,77,51,.30);
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -.05em;
+  transform: rotate(-3deg);
+}
+.profile-list { display: grid; gap: .85rem; margin: 1.25rem 0 0; }
+.profile-item {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: .8rem;
+  align-items: center;
+  min-width: 0;
+}
+.profile-item .icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 14px;
+  color: var(--orange-600);
+  background: rgba(255,255,255,.60);
+  border: 1px solid var(--border);
+  font-weight: 900;
+}
+[data-bs-theme="dark"] .profile-item .icon { background: rgba(255,255,255,.06); }
+.profile-label { color: var(--muted); font-size: .75rem; font-weight: 750; text-transform: uppercase; letter-spacing: .08em; }
+.profile-value { color: var(--ink); font-size: .92rem; font-weight: 760; overflow-wrap: anywhere; }
+
+.section-wrap { padding: 6.5rem 0; }
+.section-wrap.compact { padding: 5rem 0; }
+.section-heading { max-width: 760px; margin-bottom: 2.3rem; }
+.section-kicker { color: var(--orange-600); font-weight: 850; letter-spacing: .10em; text-transform: uppercase; font-size: .78rem; }
+.section-title { margin: .55rem 0 .75rem; font-size: clamp(2rem, 4.2vw, 3.45rem); line-height: 1.08; letter-spacing: -.05em; font-weight: 900; }
+.section-copy { color: var(--muted); font-size: 1.02rem; }
+
+.glass-card {
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px) saturate(120%);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.glass-card:hover { transform: translateY(-5px); border-color: rgba(239,77,51,.28); box-shadow: var(--shadow-strong); }
+.card-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  margin-bottom: 1.2rem;
+  border-radius: 18px;
+  color: #fff;
+  background: linear-gradient(145deg, var(--sun), var(--orange-500), var(--coral));
+  box-shadow: 0 13px 28px rgba(239,77,51,.22);
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+.card-title { color: var(--ink); font-weight: 860; letter-spacing: -.025em; }
+.card-copy { color: var(--muted); }
+.metric {
+  padding: 1.25rem;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.54);
+}
+[data-bs-theme="dark"] .metric { background: rgba(255,255,255,.04); }
+.metric-value { color: var(--orange-600); font-size: 1.3rem; font-weight: 900; }
+.metric-label { color: var(--muted); font-size: .85rem; font-weight: 700; }
+
+.skill-card { padding: 1.35rem; }
+.skill-head { display: flex; align-items: center; gap: .85rem; margin-bottom: 1rem; }
+.skill-head .card-icon { width: 46px; height: 46px; margin: 0; border-radius: 15px; }
+.skill-list { display: flex; flex-wrap: wrap; gap: .55rem; margin: 0; padding: 0; list-style: none; }
+.skill-list li {
+  padding: .45rem .7rem;
+  border-radius: 999px;
+  color: var(--ink);
+  background: rgba(244,90,36,.08);
+  border: 1px solid rgba(244,90,36,.15);
+  font-size: .84rem;
+  font-weight: 730;
+}
+
+.education-card {
+  position: relative;
+  overflow: hidden;
+}
+.education-card::after {
+  content: "QIT";
+  position: absolute;
+  right: 1rem;
+  bottom: -2rem;
+  color: rgba(244,90,36,.07);
+  font-size: clamp(5rem, 13vw, 10rem);
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: -.08em;
+}
+.education-meta { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+.meta-pill { padding: .45rem .7rem; border-radius: 999px; color: var(--orange-600); background: rgba(244,90,36,.08); border: 1px solid rgba(244,90,36,.15); font-size: .82rem; font-weight: 780; }
+
+.projects-shell {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.projects-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background: url('github-summer.webp') center / cover no-repeat;
+}
+.projects-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(180deg, rgba(255,250,244,.88), rgba(255,246,235,.96));
+}
+[data-bs-theme="dark"] .projects-shell::after { background: linear-gradient(180deg, rgba(24,13,9,.89), rgba(24,13,9,.97)); }
+.project-card { display: flex; flex-direction: column; min-height: 100%; }
+.project-card.featured {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: linear-gradient(145deg, rgba(255,255,255,.91), rgba(255,240,225,.86));
+}
+[data-bs-theme="dark"] .project-card.featured { background: linear-gradient(145deg, rgba(49,28,20,.94), rgba(36,18,13,.90)); }
+.project-label { color: var(--orange-600); font-size: .76rem; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
+.project-name { margin: .45rem 0 .7rem; color: var(--ink); font-size: 1.35rem; font-weight: 900; letter-spacing: -.035em; }
+.featured .project-name { font-size: clamp(1.8rem, 4vw, 3.1rem); }
+.project-description { color: var(--muted); }
+.project-points { margin: 1.15rem 0 1.25rem; padding-left: 1.1rem; color: var(--muted); }
+.project-points li { margin-bottom: .35rem; }
+.project-tags { display: flex; flex-wrap: wrap; gap: .48rem; margin-top: auto; padding-top: .8rem; }
+.project-tags span { padding: .38rem .6rem; border-radius: 999px; background: rgba(244,90,36,.08); border: 1px solid rgba(244,90,36,.14); color: var(--ink); font-size: .76rem; font-weight: 730; }
+.project-link { display: inline-flex; align-items: center; flex-wrap: wrap; gap: .35rem; max-width: 100%; margin-top: 1.15rem; color: var(--orange-600); font-size: .82rem; font-weight: 820; line-height: 1.45; overflow-wrap: anywhere; word-break: break-word; text-decoration: none; }
+.project-link:hover { color: var(--coral); }
+
+.practice-step {
+  position: relative;
+  padding-left: 4.4rem;
+}
+.practice-step::before {
+  content: attr(data-step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  width: 3.2rem;
+  height: 3.2rem;
+  place-items: center;
+  border-radius: 17px;
+  color: #fff;
+  background: linear-gradient(145deg, var(--sun), var(--coral));
+  box-shadow: 0 13px 28px rgba(239,77,51,.22);
+  font-weight: 900;
+}
+
+
+.capability-accordion {
+  --bs-accordion-bg: transparent;
+  --bs-accordion-border-color: transparent;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 .22rem rgba(244,90,36,.16);
+  display: grid;
+  gap: 1rem;
+}
+.capability-accordion .accordion-item {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px) saturate(120%);
+}
+.capability-accordion .accordion-button {
+  gap: .85rem;
+  padding: 1.15rem 1.25rem;
+  color: var(--ink);
+  background: transparent;
+  font-weight: 860;
+  letter-spacing: -.02em;
+}
+.capability-accordion .accordion-button:not(.collapsed) {
+  color: var(--orange-600);
+  background: rgba(244,90,36,.06);
+  box-shadow: inset 0 -1px 0 var(--border);
+}
+.capability-accordion .accordion-button::after { filter: sepia(1) saturate(2.5) hue-rotate(335deg); }
+.capability-accordion .accordion-body { padding: 1.35rem; }
+.capability-accordion .accordion-index {
+  display: grid;
+  flex: 0 0 auto;
+  width: 2.3rem;
+  height: 2.3rem;
+  place-items: center;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(145deg, var(--sun), var(--coral));
+  box-shadow: 0 9px 20px rgba(239,77,51,.18);
+  font-size: .78rem;
+  font-weight: 900;
+}
+.capability-accordion .accordion-hint {
+  margin-left: auto;
+  margin-right: .55rem;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+[data-bs-theme="dark"] .capability-accordion .accordion-button::after { filter: invert(1) sepia(1) saturate(1.8); }
+
+
+.career-panel {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.6rem, 4vw, 3rem);
+  border: 1px solid rgba(244,90,36,.18);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 88% 18%, rgba(255,177,73,.22), transparent 28%),
+    linear-gradient(135deg, rgba(255,255,255,.93), rgba(255,238,220,.86));
+  box-shadow: var(--shadow-strong);
+  backdrop-filter: blur(18px) saturate(125%);
+}
+[data-bs-theme="dark"] .career-panel {
+  background:
+    radial-gradient(circle at 88% 18%, rgba(255,177,73,.14), transparent 30%),
+    linear-gradient(135deg, rgba(48,27,19,.95), rgba(36,18,13,.92));
+}
+.career-panel::before {
+  content: "OPEN TO WORK";
+  position: absolute;
+  right: -1rem;
+  bottom: -1.1rem;
+  color: rgba(244,90,36,.065);
+  font-size: clamp(3.4rem, 9vw, 7.5rem);
+  line-height: .85;
+  font-weight: 950;
+  letter-spacing: -.07em;
+  pointer-events: none;
+}
+.career-panel > * { position: relative; z-index: 1; }
+.career-status {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .48rem .78rem;
+  border-radius: 999px;
+  color: #b93417;
+  background: rgba(255,255,255,.68);
+  border: 1px solid rgba(244,90,36,.20);
+  font-size: .82rem;
+  font-weight: 850;
+  letter-spacing: .035em;
+}
+[data-bs-theme="dark"] .career-status { color: #ffb18b; background: rgba(255,255,255,.06); }
+.career-status::before {
+  content: "";
+  width: .62rem;
+  height: .62rem;
+  border-radius: 50%;
+  background: #2fa65a;
+  box-shadow: 0 0 0 .28rem rgba(47,166,90,.13);
+}
+.career-copy { max-width: 760px; color: var(--muted); font-size: 1.03rem; }
+.career-tags { display: flex; flex-wrap: wrap; gap: .58rem; margin-top: 1.2rem; }
+.career-tags span {
+  padding: .5rem .76rem;
+  border-radius: 999px;
+  color: var(--ink);
+  background: rgba(244,90,36,.08);
+  border: 1px solid rgba(244,90,36,.15);
+  font-size: .83rem;
+  font-weight: 760;
+}
+.career-note {
+  height: 100%;
+  padding: 1.25rem;
+  border-radius: 24px;
+  color: var(--ink);
+  background: rgba(255,255,255,.60);
+  border: 1px solid var(--border);
+}
+[data-bs-theme="dark"] .career-note { background: rgba(255,255,255,.045); }
+.career-note strong { color: var(--orange-600); }
+
+.contact-panel {
+  position: relative;
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  border-radius: var(--radius-lg);
+  color: #fff;
+  background: linear-gradient(125deg, #e74b1f, #ef5930 46%, #ff9d3b);
+  box-shadow: 0 35px 90px rgba(182,59,25,.28);
+  overflow: hidden;
+}
+.contact-panel::before, .contact-panel::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,.13);
+}
+.contact-panel::before { width: 260px; height: 260px; right: -80px; top: -120px; }
+.contact-panel::after { width: 150px; height: 150px; left: 35%; bottom: -100px; }
+.contact-panel > * { position: relative; z-index: 1; }
+.contact-panel p { color: rgba(255,255,255,.86); }
+.contact-panel .btn-light { color: #c63b17; font-weight: 800; }
+.contact-panel .btn-outline-light { font-weight: 800; }
+
+.footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .88rem; }
+.back-to-top {
+  position: fixed;
+  right: 1.15rem;
+  bottom: 1.15rem;
+  z-index: 1200;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 0;
+  border-radius: 17px;
+  color: #fff;
+  background: linear-gradient(145deg, var(--orange-500), var(--coral));
+  box-shadow: 0 18px 36px rgba(239,77,51,.27);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: opacity .2s ease, transform .2s ease;
+}
+.back-to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .site-nav .nav-link { padding-left: .42rem; padding-right: .42rem; font-size: .88rem; }
+  .site-nav .d-flex .btn { padding-left: .52rem; padding-right: .52rem; font-size: .78rem; }
+  .navbar-brand { font-size: .96rem; }
+}
+
+@media (max-width: 991.98px) {
+  :root { --nav-height: 68px; }
+  .site-nav .navbar-collapse { padding: .8rem 0 1rem; }
+  .nav-link::after { left: 0; right: auto; width: 34px; bottom: 0; }
+  .hero { min-height: auto; padding-top: calc(var(--nav-height) + 3.5rem); }
+  .profile-card { max-width: 620px; margin-top: 2rem; }
+  .hero::after {
+    background: linear-gradient(180deg, rgba(255,250,244,.94) 0%, rgba(255,250,244,.82) 67%, rgba(255,250,244,.64) 100%);
+  }
+  [data-bs-theme="dark"] .hero::after { background: linear-gradient(180deg, rgba(24,13,9,.95), rgba(24,13,9,.84) 68%, rgba(24,13,9,.68)); }
+}
+
+@media (max-width: 575.98px) {
+  .section-wrap { padding: 4.5rem 0; }
+  .hero { padding-bottom: 3.5rem; }
+  .hero-title { font-size: clamp(3.1rem, 18vw, 5rem); }
+  .hero-actions .btn { width: 100%; }
+  .profile-card { border-radius: 30px; }
+  .avatar { width: 105px; height: 105px; border-radius: 30px; }
+  .glass-card { padding: 1.25rem; border-radius: 23px; }
+  .project-card.featured { border-radius: 28px; }
+  .career-panel { padding: 1.3rem; border-radius: 28px; }
+  .career-panel::before { font-size: 3.6rem; bottom: -.35rem; }
+  .career-copy { font-size: .98rem; }
+  .practice-step { padding-left: 0; padding-top: 4rem; }
+  .contact-panel .btn { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+@media print {
+  .site-nav, .scroll-progress, .back-to-top, .hero-orb, .no-print { display: none !important; }
+  body, [data-bs-theme="dark"] body { background: #fff !important; color: #111 !important; }
+  .hero { min-height: auto; padding: 1rem 0 2rem; }
+  .hero::before, .hero::after, .projects-shell::before, .projects-shell::after { display: none !important; }
+  .section-wrap { padding: 1.5rem 0; }
+  .glass-card, .profile-card, .career-panel, .contact-panel { box-shadow: none !important; border: 1px solid #ddd !important; background: #fff !important; color: #111 !important; break-inside: avoid; }
+  .contact-panel p, .career-copy, .card-copy, .project-description, .section-copy, .hero-lead, .project-points { color: #444 !important; }
+  .hero-title, .hero-title span, .section-title, .card-title, .project-name, .profile-value { color: #111 !important; -webkit-text-fill-color: initial !important; background: none !important; }
+  a { color: #111 !important; text-decoration: none !important; }
+  .capability-accordion .accordion-collapse { display: block !important; height: auto !important; visibility: visible !important; }
+  .capability-accordion .accordion-button { color: #111 !important; background: #fff !important; box-shadow: none !important; }
+  .capability-accordion .accordion-button::after, .capability-accordion .accordion-hint { display: none !important; }
+}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Wang Yifan",
+  "jobTitle": "Python / Rust Developer",
+  "description": "Seeking Python backend, Rust, Linux server-side, and network programming development roles.",
+  "email": "mailto:wangyifangwbk@163.com",
+  "telephone": "+86-156-3431-9945",
+  "url": "https://wangyifan349.github.io/summer-resume-complete/",
+  "sameAs": [
+    "https://github.com/wangyifan349"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Qingdao Institute of Technology"
+  },
+  "knowsAbout": [
+    "Python application development",
+    "Flask and FastAPI",
+    "Self-hosted file services",
+    "Network proxies",
+    "Password and data security",
+    "Rust network services"
+  ]
+}</script>
+</head>
+<body>
+<a class="skip-link" href="#mainContent">Skip to main content</a>
+<div aria-hidden="true" class="scroll-progress" id="scrollProgress"></div>
+<nav aria-label="Primary navigation" class="navbar navbar-expand-lg fixed-top site-nav">
+<div class="container-xl">
+<a aria-label="Wang Yifan home" class="navbar-brand" href="#home">
+<span class="brand-mark">WYF</span>
+<span>Wang Yifan<small class="d-block fw-semibold" style="font-size:.68rem;color:var(--muted);letter-spacing:.08em">Resume</small></span>
+</a>
+<button aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#mainNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1"><li class="nav-item"><a class="nav-link" data-section-link="" href="#home">Home</a></li><li class="nav-item"><a class="nav-link" data-section-link="" href="#projects">Projects</a></li><li class="nav-item"><a class="nav-link" data-section-link="" href="#career">Career</a></li><li class="nav-item"><a class="nav-link" data-section-link="" href="#about">Profile</a></li><li class="nav-item"><a class="nav-link" data-section-link="" href="#education">Education</a></li><li class="nav-item"><a class="nav-link" data-section-link="" href="#capabilities">Skills</a></li><li class="nav-item"><a class="nav-link" data-section-link="" href="#contact">Contact</a></li></ul>
+<div class="d-flex flex-wrap gap-2 ms-lg-3 pt-2 pt-lg-0 no-print">
+<a aria-label="Open the Chinese version" class="btn btn-soft btn-sm" href="index.html">中文</a>
+<a class="btn btn-soft btn-sm" href="https://github.com/wangyifan349" rel="noopener noreferrer" target="_blank">GitHub</a>
+<button aria-label="Theme" class="btn btn-soft btn-sm btn-icon" id="themeToggle" type="button">☾</button>
+<button class="btn btn-summer btn-sm" id="printResume" type="button">Print / PDF</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="hero" id="home">
+<span aria-hidden="true" class="hero-orb one"></span><span aria-hidden="true" class="hero-orb two"></span>
+<div class="container-xl">
+<div class="row align-items-center g-5">
+<div class="col-lg-8">
+<div class="eyebrow">Open-source projects · Practical software</div>
+<h1 class="hero-title"><span>Wang Yifan</span></h1>
+<p class="hero-role">Python / Rust Development · Open-Source Project Work</p>
+<p class="hero-lead">Graduate of Qingdao Institute of Technology who continues to build and maintain directly runnable open-source software on GitHub. Current work includes a self-hosted cloud drive, encrypted proxies, an offline password tool, a FastAPI business system, face search, secure communication, and a Rust network proxy. I am seeking development roles related to Python, Rust, backend services, or network programming.</p>
+<div class="hero-tags"><span class="hero-tag">Self-hosted cloud drive</span><span class="hero-tag">Encrypted proxy</span><span class="hero-tag">Password tool</span><span class="hero-tag">FastAPI system</span><span class="hero-tag">Face search</span><span class="hero-tag">Secure communication</span><span class="hero-tag">Rust proxy</span></div>
+<div class="hero-actions d-flex flex-wrap gap-3">
+<a class="btn btn-summer btn-lg px-4" href="#projects">View selected projects</a>
+<a class="btn btn-soft btn-lg px-4" href="#career">View career objective</a>
+</div>
+</div>
+<div class="col-lg-4">
+<aside aria-label="Profile summary" class="profile-card reveal">
+<div aria-hidden="true" class="avatar">WYF</div>
+<h2 class="h3 fw-bold mb-1">Wang Yifan</h2>
+<p class="mb-0" style="color:var(--muted)">Python / Rust Development · Open-Source Project Work</p>
+<div class="profile-list">
+<div class="profile-item"><div class="icon">@</div><div><div class="profile-label">Email</div><a class="profile-value text-decoration-none" href="mailto:wangyifangwbk@163.com">wangyifangwbk@163.com</a></div></div>
+<div class="profile-item"><div class="icon">☎</div><div><div class="profile-label">Phone</div><a class="profile-value text-decoration-none" href="tel:+8615634319945">0631-15634319945</a></div></div>
+<div class="profile-item"><div class="icon">JOB</div><div><div class="profile-label">Job-search status</div><div class="profile-value">Open to Python / Rust development opportunities</div></div></div>
+<div class="profile-item"><div class="icon">ED</div><div><div class="profile-label">Education</div><div class="profile-value">Qingdao Institute of Technology · Undergraduate degree</div></div></div>
+<div class="profile-item"><div class="icon">GH</div><div><div class="profile-label">Open-source profile</div><a class="profile-value text-decoration-none" href="https://github.com/wangyifan349" rel="noopener noreferrer" target="_blank">github.com/wangyifan349</a></div></div>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</header>
+<main id="mainContent"><section class="section-wrap projects-shell" id="projects">
+<div class="container-xl">
+<div class="section-heading reveal"><div class="section-kicker">Main Work</div><h2 class="section-title">Selected open-source projects</h2><p class="section-copy mb-0">The projects below are publicly available and include repository documentation. Each card links to the actual source repository, where the implementation, feature scope, installation instructions, and later updates can be reviewed.</p></div>
+<div class="row g-4">
+<div class="col-12">
+<article class="glass-card project-card featured reveal">
+<div class="project-label">Featured project · Self-hosted cloud drive</div>
+<h3 class="project-name">Single File Flask Drive</h3>
+<p class="project-description mb-0">A directly deployable, single-file Flask cloud drive. The backend routes, SQLite metadata logic, embedded HTML templates, CSS, and JavaScript are all contained in <code>app.py</code>, without a separate frontend project or build step.</p>
+<ul class="project-points"><li>Supports account management, hierarchical folders, uploads, downloads, renaming, deletion, drag-and-drop movement, and breadcrumb navigation.</li><li>Provides file and folder sharing, in-browser audio/video playback, online plain-text editing, and read-only viewing from shared pages.</li><li>Metadata is stored in SQLite while file contents remain on disk. Folder downloads are generated as temporary <code>.7z</code> archives to reduce memory pressure when packaging large directories.</li></ul>
+<div class="project-tags"><span>Python</span><span>Flask</span><span>SQLite</span><span>Bootstrap</span><span>py7zr</span></div>
+<a aria-label="Open github.com/wangyifan349/single-file-flask-drive" class="project-link" href="https://github.com/wangyifan349/single-file-flask-drive" rel="noopener noreferrer" target="_blank"><span>github.com/wangyifan349/single-file-flask-drive</span><span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col-md-6 col-xl-4">
+<article class="glass-card project-card reveal">
+<div class="project-label">Network programming · Encrypted proxy</div>
+<h3 class="project-name">AegisRoute</h3>
+<p class="project-description mb-0">A lightweight two-file Python proxy tunnel composed of an interactive client and server. The client exposes local HTTP, HTTPS CONNECT, SOCKS5 TCP, and SOCKS5 UDP endpoints, with TCP and UDP forwarded through their corresponding encrypted transport paths. The tunnel uses a shared password, HKDF-SHA256, and ChaCha20-Poly1305 to protect data and does not decrypt HTTPS traffic.</p>
+<div class="project-tags"><span>Python</span><span>TCP/UDP</span><span>SOCKS5</span><span>ChaCha20-Poly1305</span></div>
+<a aria-label="Open github.com/wangyifan349/AegisRoute" class="project-link" href="https://github.com/wangyifan349/AegisRoute" rel="noopener noreferrer" target="_blank"><span>github.com/wangyifan349/AegisRoute</span><span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col-md-6 col-xl-4">
+<article class="glass-card project-card reveal">
+<div class="project-label">Desktop tool · Password security</div>
+<h3 class="project-name">CipherNoteVault</h3>
+<p class="project-description mb-0">An offline password manager and secure-notes application built with Python and PyQt6. The master password is processed with Argon2id to derive a 256-bit key, and the entire <code>.cnvault</code> payload is authenticated and encrypted with ChaCha20-Poly1305. The database stores no master password, plaintext passwords, plaintext notes, or recovery backdoor, and the application includes password generation, search, and timed clipboard clearing.</p>
+<div class="project-tags"><span>Python</span><span>PyQt6</span><span>Argon2id</span><span>ChaCha20-Poly1305</span></div>
+<a aria-label="Open github.com/wangyifan349/CipherNoteVault" class="project-link" href="https://github.com/wangyifan349/CipherNoteVault" rel="noopener noreferrer" target="_blank"><span>github.com/wangyifan349/CipherNoteVault</span><span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col-md-6 col-xl-4">
+<article class="glass-card project-card reveal">
+<div class="project-label">Backend system · FastAPI</div>
+<h3 class="project-name">Provincial Government Service Platform</h3>
+<p class="project-description mb-0">A provincial government service platform prototype built with FastAPI, SQLite, SQLAlchemy, and an embedded frontend. It separates public users from role-based staff and covers personal-information queries, utility payments, public-service applications, police records, complaints and disputes, medical and tax records, and public-information management. It also supports multiple replies and receipts, request withdrawal, human-readable TXT exports, and audit logging for critical actions.</p>
+<div class="project-tags"><span>Python</span><span>FastAPI</span><span>SQLAlchemy</span><span>SQLite</span></div>
+<a aria-label="Open github.com/wangyifan349/provincial-government-service-platform" class="project-link" href="https://github.com/wangyifan349/provincial-government-service-platform" rel="noopener noreferrer" target="_blank"><span>github.com/wangyifan349/provincial-government-service-platform</span><span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col-md-6 col-xl-4">
+<article class="glass-card project-card reveal">
+<div class="project-label">Computer vision · Local search</div>
+<h3 class="project-name">Face Search Tools</h3>
+<p class="project-description mb-0">An experimental face-search toolkit for local image datasets. The current version includes a single-file Flask 1:N search application that accepts an uploaded query face and performs detection, dlib/face_recognition embedding extraction, FAISS ranking, and similarity-result presentation against a local gallery. The repository also provides an InsightFace <code>buffalo_l</code> search script and can switch automatically between CUDA and CPU execution.</p>
+<div class="project-tags"><span>Python</span><span>Flask</span><span>FAISS</span><span>dlib</span><span>InsightFace</span></div>
+<a aria-label="Open github.com/wangyifan349/face-search-tools" class="project-link" href="https://github.com/wangyifan349/face-search-tools" rel="noopener noreferrer" target="_blank"><span>github.com/wangyifan349/face-search-tools</span><span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col-md-6 col-xl-4">
+<article class="glass-card project-card reveal">
+<div class="project-label">Secure communication · Multiplexing</div>
+<h3 class="project-name">XFM4 SecureMux</h3>
+<p class="project-description mb-0">A bidirectional encrypted communication tool in Python that transfers real-time text messages and multiple large files over one TCP connection. It uses ephemeral X25519 keys, direction-specific keys derived with HKDF-SHA256, and ChaCha20-Poly1305. Logical-stream multiplexing, chunked I/O, priority scheduling, bounded queues, and multithreading preserve responsiveness, while completed files are checked for received size and SHA-256 digest.</p>
+<div class="project-tags"><span>Python</span><span>X25519</span><span>TCP</span><span>Multiplexing</span></div>
+<a aria-label="Open github.com/wangyifan349/xfm4-secure-mux" class="project-link" href="https://github.com/wangyifan349/xfm4-secure-mux" rel="noopener noreferrer" target="_blank"><span>github.com/wangyifan349/xfm4-secure-mux</span><span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="col-md-6 col-xl-4">
+<article class="glass-card project-card reveal">
+<div class="project-label">Rust · Asynchronous proxy</div>
+<h3 class="project-name">rproxy</h3>
+<p class="project-description mb-0">A lightweight local proxy server written in Rust with Tokio, providing HTTP, HTTPS CONNECT, SOCKS5 CONNECT, and SOCKS5 UDP ASSOCIATE modes. It listens on both IPv4 and IPv6 loopback addresses by default and uses asynchronous concurrent networking, TCP keepalive, and local runtime logging. HTTPS mode only forwards byte streams through CONNECT tunnels and performs no TLS decryption or man-in-the-middle inspection.</p>
+<div class="project-tags"><span>Rust</span><span>Tokio</span><span>SOCKS5</span><span>IPv4/IPv6</span></div>
+<a aria-label="Open github.com/wangyifan349/rproxy" class="project-link" href="https://github.com/wangyifan349/rproxy" rel="noopener noreferrer" target="_blank"><span>github.com/wangyifan349/rproxy</span><span aria-hidden="true">↗</span></a>
+</article>
+</div></div>
+</div>
+</section><section class="section-wrap compact" id="career">
+<div class="container-xl">
+<div class="career-panel reveal">
+<div class="row align-items-center g-4 g-lg-5">
+<div class="col-lg-8">
+<div class="career-status">Seeking opportunities · Open to discussion</div>
+<div class="section-kicker mt-4">Career Objective</div>
+<h2 class="section-title mb-3">Seeking Python, Rust, and server-side development work</h2>
+<p class="career-copy mb-0">I am looking for development roles involving Python backend engineering, Rust, Linux server-side work, or network programming. I hope to apply the practical experience gained from cloud-drive, proxy, password-security, FastAPI business-system, and encrypted-communication projects to real products. I value runnable code, verifiable functionality, and reproducible documentation, and I am prepared to continue strengthening my engineering experience within team standards. When a role aligns with these projects, I welcome a conversation and can explain the design, deployment process, problem-solving decisions, and future learning plan in more detail.</p>
+<div aria-label="Target role areas" class="career-tags"><span>Python backend development</span><span>Rust development</span><span>Linux server-side development</span><span>Network programming</span><span>Tools and platform engineering</span><span>Model-service deployment</span></div>
+</div>
+<div class="col-lg-4">
+<div class="career-note">
+<div class="section-kicker mb-2">Discussion focus</div>
+<p class="mb-3"><strong>The most useful discussion starts from the projects.</strong> During an interview, the repository source can be used to discuss requirement breakdown, API design, protocol handling, deployment and operation, and security trade-offs.</p>
+<div class="d-grid gap-2 no-print"><a class="btn btn-summer" href="mailto:wangyifangwbk@163.com?subject=Python%20%2F%20Rust%20Development%20Opportunity">Contact by email</a><a class="btn btn-soft" href="https://github.com/wangyifan349" rel="noopener noreferrer" target="_blank">View GitHub profile</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="section-wrap compact" id="about">
+<div class="container-xl">
+<div class="section-heading reveal">
+<div class="section-kicker">About the Work</div>
+<h2 class="section-title">Building runnable software around practical requirements</h2>
+<p class="section-copy mb-0">I prefer to demonstrate my development direction through completed, working code. My projects typically focus on file management, network forwarding, data security, business systems, and local intelligent search, with clear README files, configuration guidance, and direct ways to run the software whenever possible.</p>
+</div>
+<div class="row g-4">
+<div class="col-md-4">
+<article class="glass-card reveal">
+<div class="card-icon">FS</div>
+<h3 class="h5 card-title">File and data tools</h3>
+<p class="card-copy mb-0">Includes a self-hosted cloud drive, directory management, file sharing, online previews, archive downloads, and local tools for offline passwords and secure notes.</p>
+</article>
+</div>
+<div class="col-md-4">
+<article class="glass-card reveal">
+<div class="card-icon">NW</div>
+<h3 class="h5 card-title">Networking and security projects</h3>
+<p class="card-copy mb-0">Includes HTTP, HTTPS CONNECT, SOCKS5, TCP/UDP forwarding, encrypted tunnels, multiplexed communication, and asynchronous Rust proxy services.</p>
+</article>
+</div>
+<div class="col-md-4">
+<article class="glass-card reveal">
+<div class="card-icon">AP</div>
+<h3 class="h5 card-title">Backend and search applications</h3>
+<p class="card-copy mb-0">Uses Flask or FastAPI to build deployable applications and integrates local capabilities such as face embeddings and vector search into complete tools.</p>
+</article>
+</div>
+</div>
+<div class="row g-3 mt-3">
+<div class="col-6"><div class="metric"><div class="metric-value">7</div><div class="metric-label">Selected repositories</div></div></div>
+<div class="col-6"><div class="metric"><div class="metric-value">Python / Rust</div><div class="metric-label">Primary implementation languages</div></div></div>
+<div class="col-6"><div class="metric"><div class="metric-value">Local operation / Self-hosting</div><div class="metric-label">Primary delivery model</div></div></div>
+<div class="col-6"><div class="metric"><div class="metric-value">Source code + README</div><div class="metric-label">Project presentation</div></div></div>
+</div>
+</div>
+</section><section class="section-wrap" id="education">
+<div class="container-xl">
+<div class="section-heading reveal"><div class="section-kicker">Education</div><h2 class="section-title">Education</h2><p class="section-copy mb-0">Only confirmed education information is shown here. Project capabilities and practical results are demonstrated in the GitHub work above.</p></div>
+<article class="glass-card education-card reveal">
+<div class="row align-items-center g-4 position-relative" style="z-index:1">
+<div class="col-lg-3"><div class="card-icon" style="width:78px;height:78px;border-radius:25px;font-size:1.35rem">QIT</div></div>
+<div class="col-lg-9"><div class="section-kicker">Undergraduate education completed</div><h3 class="display-6 fw-bold mb-3" style="letter-spacing:-.045em">Qingdao Institute of Technology</h3><p class="card-copy mb-0">Completed undergraduate study. After graduation, I continued independent practice through public projects and turned learning outcomes into runnable software with reviewable source code and ongoing maintenance potential.</p><div class="education-meta"><span class="meta-pill">Undergraduate degree</span><span class="meta-pill">Graduated</span><span class="meta-pill">Ongoing open-source practice</span></div></div>
+</div>
+</article>
+</div>
+</section><section class="section-wrap compact" id="capabilities">
+<div class="container-xl">
+<div class="section-heading reveal">
+<div class="section-kicker">Capabilities &amp; Practice</div>
+<h2 class="section-title">Technical skills and development practice</h2>
+<p class="section-copy mb-0">These are not disconnected technology keywords; they are engineering capabilities demonstrated by completed software. Working primarily with Python and Rust, I can independently take a system from requirements and architecture through data or protocol design, implementation, debugging, deployment, documentation, and maintenance—covering backend platforms, cloud-drive software, proxy tools, encrypted applications, and computer-vision search systems. The details remain collapsed by default and can be expanded when needed.</p>
+</div>
+<div class="accordion capability-accordion reveal" id="capabilityAccordion">
+<div class="accordion-item">
+<h3 class="accordion-header" id="skillsHeading">
+<button aria-controls="skillsCollapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#skillsCollapse" data-bs-toggle="collapse" type="button">
+<span class="accordion-index">01</span><span>Complete technical capabilities</span><span class="accordion-hint d-none d-sm-inline">Expand to view project-backed capabilities</span>
+</button>
+</h3>
+<div aria-labelledby="skillsHeading" class="accordion-collapse collapse" data-bs-parent="#capabilityAccordion" id="skillsCollapse">
+<div class="accordion-body">
+<div class="row g-3">
+<div class="col-md-6 col-xl-4"><article class="glass-card skill-card h-100"><div class="skill-head"><div class="card-icon">PY</div><h4 class="h5 card-title mb-0">Python / Flask / FastAPI backend</h4></div><p class="card-copy small mb-3">Advanced Python proficiency, with the ability to independently build complete backend systems in Flask and FastAPI—from APIs, data models, authorization, and sessions to file workflows, business processes, and deployment configuration—rather than isolated demos or individual endpoints.</p><ul class="skill-list"><li>Python</li><li>Flask</li><li>FastAPI</li><li>SQLAlchemy</li><li>SQLite</li><li>REST APIs</li><li>Jinja</li><li>Authentication</li><li>File transfer</li><li>Streaming responses</li></ul></article></div>
+<div class="col-md-6 col-xl-4"><article class="glass-card skill-card h-100"><div class="skill-head"><div class="card-icon">FS</div><h4 class="h5 card-title mb-0">Complete applications and cloud-drive engineering</h4></div><p class="card-copy small mb-3">Able to turn requirements into a complete usable product. I independently built a self-hosted drive with accounts, hierarchical folders, file and folder operations, sharing, media playback, online text editing, and disk-based archive downloads, including persistence, ownership boundaries, and large-file concerns.</p><ul class="skill-list"><li>Account systems</li><li>Hierarchical folders</li><li>File permissions</li><li>Share management</li><li>Media playback</li><li>Text editing</li><li>Disk persistence</li><li>.7z archives</li><li>Self-hosting</li></ul></article></div>
+<div class="col-md-6 col-xl-4"><article class="glass-card skill-card h-100"><div class="skill-head"><div class="card-icon">RS</div><h4 class="h5 card-title mb-0">Rust systems and asynchronous services</h4></div><p class="card-copy small mb-3">Advanced Rust proficiency with practical Tokio-based development of long-running asynchronous network services and command-line tools, including TCP/UDP, concurrent tasks, dual-stack listeners, connection lifecycles, error propagation, resource cleanup, binary delivery, and cross-platform operation.</p><ul class="skill-list"><li>Rust</li><li>Tokio</li><li>Asynchronous I/O</li><li>socket2</li><li>Concurrent tasks</li><li>IPv4 / IPv6</li><li>CLI tools</li><li>Error handling</li><li>Cross-platform builds</li></ul></article></div>
+<div class="col-md-6 col-xl-4"><article class="glass-card skill-card h-100"><div class="skill-head"><div class="card-icon">CV</div><h4 class="h5 card-title mb-0">Computer vision and vector search</h4></div><p class="card-copy small mb-3">Experienced with face detection, embedding extraction, and 1:N similarity search, including image preprocessing, vector normalization, indexing, ranking, and threshold decisions. I have implemented dlib/FAISS and InsightFace search tools and am familiar with common OpenCV algorithms.</p><ul class="skill-list"><li>dlib</li><li>face_recognition</li><li>FAISS</li><li>InsightFace</li><li>Cosine similarity</li><li>Euclidean distance</li><li>Vector normalization</li><li>OpenCV</li><li>SIFT</li><li>Gaussian blur</li></ul></article></div>
+<div class="col-md-6 col-xl-4"><article class="glass-card skill-card h-100"><div class="skill-head"><div class="card-icon">NW</div><h4 class="h5 card-title mb-0">Network protocols and proxy systems</h4></div><p class="card-copy small mb-3">Able to implement networking software directly around protocols and connection state. I have completed an encrypted Python proxy and a high-performance Rust proxy covering HTTP, HTTPS CONNECT, SOCKS5 TCP/UDP, separate UDP forwarding, multiplexing, and concurrent connection handling.</p><ul class="skill-list"><li>TCP / UDP</li><li>HTTP / HTTPS</li><li>CONNECT tunnels</li><li>SOCKS5</li><li>UDP ASSOCIATE</li><li>Sockets</li><li>Proxy tunnels</li><li>Multiplexing</li><li>Concurrent connections</li><li>Protocol parsing</li></ul></article></div>
+<div class="col-md-6 col-xl-4"><article class="glass-card skill-card h-100"><div class="skill-head"><div class="card-icon">SE</div><h4 class="h5 card-title mb-0">Encrypted software and security engineering</h4></div><p class="card-copy small mb-3">Built a local-first password and secure-notes vault, as well as an end-to-end encrypted communication tool supporting messaging, multiplexed streams, and concurrent large-file transfers. Able to combine established primitives correctly and handle KDFs, randomness, nonces, AEAD, and integrity verification.</p><ul class="skill-list"><li>Argon2id</li><li>ChaCha20-Poly1305</li><li>X25519</li><li>HKDF-SHA256</li><li>SHA-256</li><li>Ed25519</li><li>AEAD</li><li>Key derivation</li><li>Integrity checks</li><li>Atomic writes</li></ul></article></div>
+<div class="col-md-6 col-xl-4"><article class="glass-card skill-card h-100"><div class="skill-head"><div class="card-icon">AI</div><h4 class="h5 card-title mb-0">Model deployment and inference services</h4></div><p class="card-copy small mb-3">Familiar with Hugging Face and the Transformers ecosystem, including model download and loading, CPU/CUDA inference, input/output processing, inference API integration, and Linux deployment of local model services and vector-search capabilities.</p><ul class="skill-list"><li>Hugging Face</li><li>Transformers</li><li>Model loading</li><li>CPU / CUDA inference</li><li>FastAPI inference APIs</li><li>Embeddings</li><li>Local vector search</li><li>Linux deployment</li></ul></article></div>
+<div class="col-md-6 col-xl-4"><article class="glass-card skill-card h-100"><div class="skill-head"><div class="card-icon">LX</div><h4 class="h5 card-title mb-0">Linux deployment and operations</h4></div><p class="card-copy small mb-3">Able to move software from a development environment onto Linux hosts, handling dependencies, environment variables, permissions, persistent directories, logs, ports, firewalls, and reverse proxies, while diagnosing startup failures, network problems, and resource usage.</p><ul class="skill-list"><li>Linux</li><li>Shell</li><li>Environment variables</li><li>Permissions</li><li>Log diagnosis</li><li>Process management</li><li>Reverse proxies</li><li>Persistent storage</li><li>Service deployment</li></ul></article></div>
+</div>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<h3 class="accordion-header" id="practiceHeading">
+<button aria-controls="practiceCollapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#practiceCollapse" data-bs-toggle="collapse" type="button">
+<span class="accordion-index">02</span><span>Development practices and working approach</span><span class="accordion-hint d-none d-sm-inline">Click to expand</span>
+</button>
+</h3>
+<div aria-labelledby="practiceHeading" class="accordion-collapse collapse" data-bs-parent="#capabilityAccordion" id="practiceCollapse">
+<div class="accordion-body">
+<div class="row g-3">
+<div class="col-md-6"><article class="glass-card practice-step h-100" data-step="01"><h4 class="h5 card-title">Requirements-to-delivery ownership</h4><p class="card-copy mb-0">Able to independently handle requirements decomposition, technology selection, module design, core implementation, integration, failure handling, configuration, deployment, and documentation—delivering real workflows rather than a presentation assembled from scaffolding.</p></article></div>
+<div class="col-md-6"><article class="glass-card practice-step h-100" data-step="02"><h4 class="h5 card-title">Backend architecture and data boundaries</h4><p class="card-copy mb-0">Design routes, data models, authorization checks, state transitions, file layouts, and validation around business objects; apply clear ownership, role, sharing, and persistence boundaries in drive, government-platform, and security projects.</p></article></div>
+<div class="col-md-6"><article class="glass-card practice-step h-100" data-step="03"><h4 class="h5 card-title">Performance, concurrency, and reliability</h4><p class="card-copy mb-0">Use streaming responses, disk-backed temporary archives, asynchronous I/O, concurrent tasks, separate TCP/UDP paths, and connection cleanup for file and networking workloads, reducing unnecessary memory pressure, blocking, and resource leakage.</p></article></div>
+<div class="col-md-6"><article class="glass-card practice-step h-100" data-step="04"><h4 class="h5 card-title">Security boundaries and cryptographic engineering</h4><p class="card-copy mb-0">Understand authentication, authorization, sessions, random tokens, KDFs, AEAD, nonces, directional key separation, and file verification; prefer established primitives and document both the security model and its limitations.</p></article></div>
+<div class="col-md-6"><article class="glass-card practice-step h-100" data-step="05"><h4 class="h5 card-title">Debugging, verification, and cross-platform operation</h4><p class="card-copy mb-0">Use logs, error paths, smoke tests, and real user workflows to diagnose issues, while accounting for Linux and Windows differences in dependencies, builds, file systems, and networking so others can reproduce and run the software.</p></article></div>
+<div class="col-md-6"><article class="glass-card practice-step h-100" data-step="06"><h4 class="h5 card-title">Documentation and maintainability</h4><p class="card-copy mb-0">Provide complete READMEs, installation commands, configuration parameters, directory descriptions, security notes, and licenses so the code is not only runnable, but also reviewable, deployable, maintainable, and extensible.</p></article></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section-wrap compact" id="contact">
+<div class="container-xl">
+<div class="contact-panel reveal">
+<div class="row align-items-center g-4">
+<div class="col-lg-8"><div class="text-uppercase fw-bold small mb-2" style="letter-spacing:.12em">Contact</div><h2 class="display-5 fw-bold mb-3" style="letter-spacing:-.05em">Open to discussing development roles and project details</h2><p class="mb-0">For roles involving Python, Rust, backend services, Linux, or network programming, please contact me by email. We can also begin with a GitHub project and discuss its implementation, deployment, and maintenance in more detail.</p></div>
+<div class="col-lg-4"><div class="d-grid gap-3"><a class="btn btn-light btn-lg" href="mailto:wangyifangwbk@163.com">Send email</a><a class="btn btn-outline-light btn-lg" href="https://github.com/wangyifan349" rel="noopener noreferrer" target="_blank">Visit GitHub</a></div></div>
+</div>
+</div>
+</div>
+</section></main>
+<footer class="footer"><div class="container-xl d-flex flex-column flex-md-row justify-content-between gap-2"><span>© <span id="currentYear">Project-focused static resume · Bootstrap theme · Ready for GitHub Pages</span> Wang Yifan</span><span>Static personal resume · Bootstrap theme · Ready for GitHub Pages</span></div></footer>
+<button aria-label="Back to top" class="back-to-top no-print" id="backToTop" type="button">↑</button>
+<script crossorigin="anonymous" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(() => {
+  'use strict';
+
+  const root = document.documentElement;
+  const isChinese = root.lang.toLowerCase().startsWith('zh');
+  const themeButton = document.getElementById('themeToggle');
+  const progress = document.getElementById('scrollProgress');
+  const backToTop = document.getElementById('backToTop');
+  const year = document.getElementById('currentYear');
+  const printButton = document.getElementById('printResume');
+  const navCollapse = document.getElementById('mainNav');
+
+  const setTheme = (theme) => {
+    root.setAttribute('data-bs-theme', theme);
+    localStorage.setItem('resume-theme', theme);
+    if (themeButton) {
+      themeButton.textContent = theme === 'dark' ? '☀' : '☾';
+      themeButton.setAttribute('aria-label', theme === 'dark'
+        ? (isChinese ? '切换到浅色模式' : 'Switch to light mode')
+        : (isChinese ? '切换到深色模式' : 'Switch to dark mode'));
+    }
+  };
+
+  const savedTheme = localStorage.getItem('resume-theme');
+  const preferredDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  setTheme(savedTheme || (preferredDark ? 'dark' : 'light'));
+
+  themeButton?.addEventListener('click', () => {
+    setTheme(root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark');
+  });
+
+  const updateScroll = () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const value = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+    if (progress) progress.style.width = `${Math.min(100, Math.max(0, value))}%`;
+    backToTop?.classList.toggle('show', window.scrollY > 620);
+  };
+  updateScroll();
+  window.addEventListener('scroll', updateScroll, { passive: true });
+
+  backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  printButton?.addEventListener('click', () => window.print());
+  if (year) year.textContent = String(new Date().getFullYear());
+
+  const revealItems = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealItems.forEach((item) => revealObserver.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add('visible'));
+  }
+
+  const sections = [...document.querySelectorAll('main section[id], header[id]')];
+  const navLinks = [...document.querySelectorAll('[data-section-link]')];
+  if ('IntersectionObserver' in window && sections.length) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+      navLinks.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${visible.target.id}`);
+      });
+    }, { rootMargin: '-28% 0px -58% 0px', threshold: [0.08, 0.2, 0.45] });
+    sections.forEach((section) => sectionObserver.observe(section));
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 992 && navCollapse?.classList.contains('show') && window.bootstrap) {
+        bootstrap.Collapse.getOrCreateInstance(navCollapse).hide();
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
